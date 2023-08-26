@@ -2,7 +2,7 @@ this is the main page `index.md` file asdf
 
 ## Posts
 
-<ul>
+<ul style="list-style-type: none;">
 {% for post in site.posts %}
   <li class='margin-top: .5em;'><b><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></b> - {{ post.description }}</li>
 {% endfor %}
@@ -11,10 +11,10 @@ this is the main page `index.md` file asdf
 ## Tags
 
 {% for tag in site.tags %}
-  <h3>{{ tag[0] }}</h3>
-  <ul>
+  <div>
+    <b>{{ tag[0] }}:</b>
     {% for post in tag[1] %}
-      <li class='margin-top: .5em;'><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></li>
+      <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
     {% endfor %}
-  </ul>
+  </div>
 {% endfor %}

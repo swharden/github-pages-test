@@ -2,9 +2,10 @@ this is the main page `index.md` file asdf
 
 <ul>
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.permalink }}">{{ post.title }}</a>
-      <p>{{ post.description }}</p>
-    </li>
+    <div>
+      <a href="{{ post.url }}">{{ post.title }}</a> - 
+      {{ post.description }} 
+      ({{ post.date | date: "%B %-d, %Y"  }})
+    </div>
   {% endfor %}
 </ul>

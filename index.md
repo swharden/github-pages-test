@@ -8,6 +8,10 @@
 </ul>
 
 {% for tag in site.tags %}
+  {% if p.unlisted %}
+  <div>UNLISTED</div>
+  {% else %}
+
   <div style='margin-top: .5em;'>
     {{ tag[0] }}:
     {% for post in tag[1] %}

@@ -1,0 +1,11 @@
+---
+layout: post_markdown
+title: Test Post
+description: this is just a test post
+tags:
+- tag1
+- tag2
+- tag3
+---
+
+content of `test.md` cool

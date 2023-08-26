@@ -8,14 +8,15 @@
 </ul>
 
 {% for tag in site.tags %}
-  {% if p.unlisted %}
+  {% if page.unlisted %}
   <div>UNLISTED</div>
   {% else %}
+    <div style='margin-top: .5em;'>
+      {{ tag[0] }}:
+      {% for post in tag[1] %}
+        <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>,
+      {% endfor %}
+    </div>
+  {% endif %}
 
-  <div style='margin-top: .5em;'>
-    {{ tag[0] }}:
-    {% for post in tag[1] %}
-      <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>,
-    {% endfor %}
-  </div>
 {% endfor %}

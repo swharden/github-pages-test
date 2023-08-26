@@ -8,8 +8,8 @@
 </ul>
 
 {% for tag in site.tags %}
-  {% if page.unlisted %}
-  <div>UNLISTED</div>
+  {% if page.visibility == "unlisted" %}
+    <div>UNLISTED</div>
   {% else %}
     <div style='margin-top: .5em;'>
       {{ tag[0] }}:

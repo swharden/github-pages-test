@@ -1,5 +1,3 @@
-<h1>Posts</h1>
-
 <ul style="list-style-type: none; padding: 0px;">
 {% for post in site.posts %}
   <li style='margin-top: .5em;'>
@@ -8,8 +6,6 @@
   </li>
 {% endfor %}
 </ul>
-
-<h1>Tags</h1>
 
 {% for tag in site.tags %}
   <div style='margin-top: .5em;'>

@@ -6,7 +6,7 @@
     <b><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></b> - {{ post.description }}
     ({{ post.date | date: "%A, %B %e, %Y" }})
   </li>
-  {% endif %}
+  {% endunless %}
 
 {% endfor %}
 </ul>
